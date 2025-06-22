@@ -49,7 +49,9 @@ $(function () {
     let beg = $('.begin');
     beg.click(function () {
         $(this).hide();
-        $('audio')[0].play();
+        let bgMusic = $('#bg-music')[0];
+        bgMusic.currentTime = 21;
+        bgMusic.play();
         feiru();
     });
 })

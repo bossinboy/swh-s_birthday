@@ -181,7 +181,7 @@
 <div class="happy">
     <img src="img/HappyBirthday.png">
 </div>
-<div class="button-style1" id="isLike" style="top:60%;width: 100%" align="center">
+<div class="button-style1" id="isLike" style="top:50%;width: 100%" align="center">
     <div class="lk1" STYLE="font-size: 20px; margin-left: 20px;margin-right: 20px">
         今天是你上线的一天，不是为了开枪，是为了收礼！
 愿你新的一岁，枪枪爆头、局局MVP，
@@ -193,7 +193,7 @@
     </div>
     <!---->
 </div>
-<div class="button-style1" style="top:60%;width: 100%">
+<div class="button-style1" style="top:75%;width: 100%">
     <div class="lk1" STYLE="font-size: 20px;margin-bottom: 20px;">
         你喜欢吗?
     </div>
@@ -220,7 +220,16 @@
         </tr>
     </table>
 </div>
-<div class="button-style2">
+<div class="button-style2" id="memories-link" style="display: none; position: fixed; right: 20px; bottom: 20px;">
+    <a href="Memories.html" class="lk2">
+        <div class="link2">
+            <div class="bt1" STYLE="font-size: 18px">
+                赞一下
+            </div>
+        </div>
+    </a>
+</div>
+<div class="button-style2" id="img-link">
     <a href="img.html" class="lk2">
         <div class="link2">
             <div class="bt1" STYLE="font-size: 18px">
@@ -253,6 +262,7 @@
     let jishiqi = setInterval(tiaoZheng, 11000);
 
     function love() {
+        $('.button-style1').eq(1).hide();
         $('#ILove').remove();
         $("#isLike").append(`<div class="lk1" id="ILove" style=" opacity:0;font-size:10px;margin-top: 20px" >喜欢就点个赞~</div>`);
         $('#ILove').animate({
